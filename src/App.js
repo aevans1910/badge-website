@@ -1,18 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 import data, {categoriesUnique, categoriesWithCounts, categoriesWithCountsArray} from './badge-data';
-import Badge from './badge'
+import Badge from './Badge'
+import CategoryButton from './CategoryButton'
 
 function App() {
-console.log(categoriesWithCountsArray)
+const [selectedCategory, setSelectedCategory] = useState("")
   return (
     <div className="App">
+      <p>{selectedCategory}</p>
       <div className="container">
-        {categoriesUnique.map(category => <button key={category}>{category}</button>)}
+        {categoriesUnique.map(category => <CategoryButton category={category} 
+          updateCategory={setSelectedCategory} />)}
       </div>
       <div className="container">
-        {data.map(badge => <Badge badge={badge}/>)}
+        {data.filter(badge => badge.category === selectedCategory).map(badge => <Badge badge={badge}/>)}
       </div>
     </div>
   );
