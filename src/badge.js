@@ -4,8 +4,8 @@ export default function Badge(props) {
     const {name, description, category} = props.badge
       return (
         <div className="Badge">
-            <h1>{name}</h1>
-            <h5>{category}</h5>
+            <h3>{name}</h3>
+            <h4>{category}</h4>
             <p>{description}</p>
         </div>
       );
