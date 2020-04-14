@@ -5,8 +5,9 @@ import Badge from './Badge'
 import PageHeader from './PageHeader'
 import CategoryButton from './CategoryButton'
 
+categoriesUnique.push("All")
 function App() {
-const [selectedCategory, setSelectedCategory] = useState("")
+const [selectedCategory, setSelectedCategory] = useState("All")
   return (
     <div className="App">
       <PageHeader />
@@ -18,7 +19,7 @@ const [selectedCategory, setSelectedCategory] = useState("")
           updateCategory={setSelectedCategory} />)}
       </div>
       <div className="container">
-        {data.filter(badge => badge.category === selectedCategory).map(badge => <Badge badge={badge}/>)}
+        {data.filter(badge => badge.category === selectedCategory || selectedCategory === "All").map(badge => <Badge badge={badge}/>)}
       </div>
     </div>
   );

@@ -1,4 +1,13 @@
 import data from './badge-data.json' // imports data.json
+data.sort((a, b) => {
+    if (a.category < b.category) {
+        return -1
+    }
+    if (a.category > b.category) {
+        return 1
+    }
+    return 0
+})
 export default data // export the native JS array
 
 const categories = data.map((item) => {
@@ -31,3 +40,4 @@ export const categoriesWithCountsArray = data.reduce((array, item) => {
     array.push(newCat)
     return array
 }, [])
+
