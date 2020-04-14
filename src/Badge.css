@@ -1,7 +1,13 @@
 .Badge {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
     padding: 20px;
     border: 20px;
+}
+
+.Badge > .Text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

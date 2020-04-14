@@ -1,26 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import data, {categoriesUnique, categoriesWithCounts, categoriesWithCountsArray} from './badge-data';
-import Badge from './Badge'
 import PageHeader from './PageHeader'
-import CategoryButton from './CategoryButton'
+import PageContent from './PageContent'
 
-categoriesUnique.push("All")
 function App() {
-const [selectedCategory, setSelectedCategory] = useState("All")
   return (
     <div className="App">
       <PageHeader />
-      <div className="container">
-        <div className="text">
-          <p>BADGE TYPES</p>
-        </div>
-        {categoriesUnique.map(category => <CategoryButton category={category} 
-          updateCategory={setSelectedCategory} />)}
-      </div>
-      <div className="container">
-        {data.filter(badge => badge.category === selectedCategory || selectedCategory === "All").map(badge => <Badge badge={badge}/>)}
-      </div>
+      <PageContent />
     </div>
   );
 }
