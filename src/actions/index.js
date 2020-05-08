@@ -1,7 +1,8 @@
 export const TOGGLE_BADGE = "TOGGLE_BADGE"
 
-export function toggle_badge() {
+export function toggle_badge(id) {
     return {
-        type: TOGGLE_BADGE
+        type: TOGGLE_BADGE,
+        id: id
     }
 }
