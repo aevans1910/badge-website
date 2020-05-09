@@ -19,7 +19,7 @@ function Badge(props) {
               Received badge 
               <button onClick={() => 
                 {toggle_badge(id) 
-                }}>{badges[id] === undefined ? "0": "X"}</button>
+                }}>{badges[id] === undefined ? "": "✅"}</button>
             </div>
           </div>
         </div>

@@ -13,8 +13,10 @@ export default function PageContent() {
             <div className="text">
               <p>BADGE TYPES</p>
             </div>
-            {categoriesUnique.map(category => <CategoryButton category={category} 
-              updateCategory={setSelectedCategory} />)}
+            <div className="buttons">
+              {categoriesUnique.map(category => <CategoryButton category={category} 
+                updateCategory={setSelectedCategory} />)}
+            </div>
           </div>
           <div className="container">
             {data.filter(badge => badge.category === selectedCategory || selectedCategory === "All").map(badge => <Badge badge={badge}/>)}
