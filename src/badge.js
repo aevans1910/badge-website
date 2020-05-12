@@ -17,9 +17,8 @@ function Badge(props) {
             <p>{description}</p>
             <div className="toggleButton">
               Received badge 
-              <button onClick={() => 
-                {toggle_badge(id) 
-                }}>{badges[id] === undefined ? "": "✅"}</button>
+              <input type="checkbox" className="checkButtons" onClick={() => 
+                {toggle_badge(id) }} value={!!badges[id]} />
             </div>
           </div>
         </div>

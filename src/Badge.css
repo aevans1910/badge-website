@@ -10,3 +10,14 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.toggleButton {
+    display: flex;
+    align-items: center;
+}
+
+.checkButtons {
+    height: 15px;
+    width: 15px;
+    margin-left: 10px;
+}

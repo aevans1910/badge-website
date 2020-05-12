@@ -7,4 +7,9 @@
 }
 .PageHeader > header {
     display: flex;
+    align-items: center;
+}
+
+header > img {
+    margin-left: 13px;
 }
